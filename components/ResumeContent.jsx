@@ -1,0 +1,307 @@
+'use client'
+import { useState } from 'react'
+
+export default function ResumeContent() {
+  return (
+    <div className="min-h-screen px-4 sm:px-6 lg:px-12 py-12 lg:py-16">
+      <div className="max-w-7xl mx-auto">
+        {/* Testimonials Section */}
+        <TestimonialsSection />
+
+        {/* Resume Section */}
+        <ResumeSection />
+      </div>
+    </div>
+  )
+}
+
+function TestimonialsSection() {
+  const [currentSlide, setCurrentSlide] = useState(0)
+
+  const testimonials = [
+    {
+      id: 1,
+      name: 'John Summers',
+      role: 'CEO, Company',
+      rating: 5,
+      text: 'I highly recommend this business. The product quality is outstanding, exceeding my expectations every time. I was completely impressed with their professionalism and customer service. Pricing is fair and transparent definitely value for money.',
+      avatar: '/avatars/avatar1.jpg'
+    },
+    {
+      id: 2,
+      name: 'Bryn Hooper',
+      role: 'CEO, Abc.Inc',
+      rating: 5,
+      text: 'I highly recommend this business. The product quality is outstanding, exceeding my expectations every time. I was completely impressed with their professionalism and customer service. Pricing is fair and transparent definitely value for money.',
+      avatar: '/avatars/avatar2.jpg'
+    },
+    {
+      id: 3,
+      name: 'Caspar',
+      role: 'CEO, Abc.Inc',
+      rating: 5,
+      text: 'I highly recommend this business. The product quality is outstanding, exceeding my expectations every time. I was completely impressed with their professionalism and customer service. Pricing is fair and transparent definitely value for money.',
+      avatar: '/avatars/avatar3.jpg'
+    },
+  ]
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % testimonials.length)
+  }
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + testimonials.length) % testimonials.length)
+  }
+
+  return (
+    <div className="relative mb-20">
+      {/* Background decorative lines */}
+      <div className="absolute inset-0 flex items-center justify-end opacity-10 overflow-hidden">
+        <div className="flex gap-1">
+          {[...Array(20)].map((_, i) => (
+            <div key={i} className="w-px bg-[#9ef01a]" style={{ height: `${Math.random() * 200 + 50}px` }}></div>
+          ))}
+        </div>
+      </div>
+
+      {/* Badge */}
+      <div className="flex items-center gap-2 mb-4 relative z-10">
+        <span className="text-gray-400 text-sm">💬</span>
+        <span className="text-xs uppercase tracking-wider text-gray-500">TESTIMONIALS</span>
+      </div>
+
+      {/* Title */}
+      <h2 className="text-4xl sm:text-5xl font-bold mb-12 text-white relative z-10">
+        Here's what my clients say
+      </h2>
+
+      {/* Testimonial Slider */}
+      <div className="relative max-w-5xl">
+        <div className="overflow-hidden">
+          <div 
+            className="flex transition-transform duration-500 ease-in-out"
+            style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+          >
+            {testimonials.map((testimonial) => (
+              <div key={testimonial.id} className="w-full flex-shrink-0 px-2">
+                <TestimonialCard testimonial={testimonial} />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Dots Navigation */}
+        <div className="flex justify-center gap-2 mt-8">
+          {testimonials.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                currentSlide === index ? 'bg-[#9ef01a] w-6' : 'bg-gray-600'
+              }`}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function TestimonialCard({ testimonial }) {
+  return (
+    <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-2xl p-8">
+      {/* Stars */}
+      <div className="flex gap-1 mb-4">
+        {[...Array(testimonial.rating)].map((_, i) => (
+          <svg key={i} className="w-5 h-5 text-[#9ef01a]" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+        ))}
+      </div>
+
+      {/* Text */}
+      <p className="text-gray-300 text-base leading-relaxed mb-8">
+        {testimonial.text}
+      </p>
+
+      {/* Author */}
+      <div className="flex items-center gap-4">
+        <div className="w-14 h-14 rounded-full bg-gradient-to-br from-gray-700 to-gray-800 overflow-hidden flex-shrink-0">
+          {/* Placeholder for avatar */}
+          <div className="w-full h-full flex items-center justify-center text-2xl text-gray-400">
+            {testimonial.name[0]}
+          </div>
+        </div>
+        <div>
+          <h4 className="text-[#9ef01a] font-semibold text-lg">{testimonial.name}</h4>
+          <p className="text-gray-500 text-sm">{testimonial.role}</p>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function ResumeSection() {
+  const experiences = [
+    {
+      id: 1,
+      year: '2023 - Present',
+      title: 'AIOps/MLOps Engineer',
+      location: 'LOS ANGELES, GOOGLE',
+      description: 'Design and implement end-to-end MLOps pipelines for ML models using GitHub Actions and AWS services.'
+    },
+    {
+      id: 2,
+      year: '2022 - 2023',
+      title: 'Machine Learning Engineer',
+      location: 'NEW YORK, MICROSOFT',
+      description: 'Enhanced an automatic data processing machine performance by analyzing, testing, debugging lines of code.'
+    },
+  ]
+
+  const certifications = [
+    {
+      id: 1,
+      year: '2019 - 2020',
+      title: 'AWS Certified Machine Learning',
+      subtitle: 'Speciality',
+      description: 'Two years of hands-on experience developing, architecting, and running ML or deep learning workloads in the AWS Cloud.',
+      link: 'CERTIFICATE'
+    },
+    {
+      id: 2,
+      year: '2018 - 2019',
+      title: 'Professional Machine Learning Engineer',
+      subtitle: 'Google Cloud',
+      description: 'Builds, evaluates, productionizes, and optimizes AI solutions by using Google Cloud capabilities and knowledge.',
+      link: 'CERTIFICATE'
+    },
+  ]
+
+  const education = [
+    {
+      id: 1,
+      year: '2012 - 2016',
+      title: 'Bachelor of Computer Science',
+      location: 'Carson, USA',
+      description: 'Master of Science in Machine Learning and Artificial Intelligence. Minors in Data Structures and Algorithm Design.',
+      link: 'COMPUTER SCIENCE',
+      logo: '/logos/logo1.png'
+    },
+    {
+      id: 2,
+      year: '2004 - 2012',
+      title: 'University of California, Berkeley',
+      location: 'California, USA',
+      description: 'Relevant Coursework: Machine Learning, Statistical Analysis, Data Mining. Honors: Dean\'s List, Honors Thesis in Predictive Modeling.',
+      link: 'ABOUT UNIVERSITY',
+      logo: '/logos/logo2.png'
+    },
+  ]
+
+  return (
+    <div className="relative">
+      {/* Background decorative lines */}
+      <div className="absolute inset-0 flex items-center justify-end opacity-10 overflow-hidden">
+        <div className="flex gap-1">
+          {[...Array(20)].map((_, i) => (
+            <div key={i} className="w-px bg-[#9ef01a]" style={{ height: `${Math.random() * 200 + 50}px` }}></div>
+          ))}
+        </div>
+      </div>
+
+      {/* Title */}
+      <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-16 relative z-10">
+        <span className="text-[#9ef01a]">R</span>ESUME
+      </h1>
+
+      {/* Experience Section */}
+      <TimelineSection title="💼EXPERIENCE" items={experiences} type="experience" />
+
+      {/* Certifications and Education Grid */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+        <TimelineSection title="🏆CERTIFICATIONS" items={certifications} type="certification" />
+        <TimelineSection title="🎓EDUCATION" items={education} type="education" />
+      </div>
+    </div>
+  )
+}
+
+function TimelineSection({ title, items, type }) {
+  return (
+    <div className="relative z-10 mb-16">
+      {/* Section Badge */}
+      <div className="flex items-center gap-2 mb-8">
+        <span className="text-xs uppercase tracking-wider text-gray-500 px-4 py-2 bg-[#1a1a1a] rounded-full border border-[#2a2a2a]">
+          {title}
+        </span>
+      </div>
+
+      {/* Timeline Items */}
+      <div className="space-y-8">
+        {items.map((item, index) => (
+          <TimelineItem key={item.id} item={item} type={type} isLast={index === items.length - 1} />
+        ))}
+      </div>
+    </div>
+  )
+}
+
+function TimelineItem({ item, type, isLast }) {
+  return (
+    <div className="relative pl-8">
+      {/* Timeline Line */}
+      {!isLast && (
+        <div className="absolute left-0 top-8 bottom-0 w-px bg-[#2a2a2a]"></div>
+      )}
+
+      {/* Timeline Dot */}
+      <div className="absolute left-0 top-2 w-2 h-2 rounded-full bg-[#9ef01a] -translate-x-[3.5px]"></div>
+
+      {/* Content Card */}
+      <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-2xl p-6 hover:border-[#9ef01a]/50 transition-all duration-300">
+        {/* Year Badge */}
+        <div className="inline-block px-3 py-1 bg-[#252525] text-gray-400 text-xs rounded-md mb-4">
+          {item.year}
+        </div>
+
+        {/* Title */}
+        <h3 className="text-xl font-semibold text-white mb-2 flex items-start justify-between">
+          <span>{item.title}</span>
+          {type === 'education' && item.logo && (
+            <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center p-2">
+              {/* Logo placeholder */}
+              <div className="text-xs text-gray-800 font-bold">LOGO</div>
+            </div>
+          )}
+        </h3>
+
+        {/* Subtitle/Location */}
+        {item.subtitle && (
+          <p className="text-gray-500 text-sm mb-4">{item.subtitle}</p>
+        )}
+        {item.location && (
+          <p className="text-gray-500 text-sm uppercase tracking-wider mb-4">{item.location}</p>
+        )}
+
+        {/* Description */}
+        <p className="text-gray-400 text-sm leading-relaxed mb-4">
+          {item.description}
+        </p>
+
+        {/* Link */}
+        {item.link && (
+          <a 
+            href="#"
+            className="inline-flex items-center gap-2 text-white text-sm font-medium uppercase tracking-wide hover:text-[#9ef01a] transition-colors duration-300 border-b border-white hover:border-[#9ef01a] pb-1"
+          >
+            {item.link}
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        )}
+      </div>
+    </div>
+  )
+}

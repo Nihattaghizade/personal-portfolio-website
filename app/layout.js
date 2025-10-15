@@ -2,8 +2,8 @@ import './globals.css'
 import ClientLayout from '@/components/ClientLayout'
 
 export const metadata = {
-  title: 'Ryan Bernard - ML Engineer',
-  description: 'Machine Learning Engineer Portfolio',
+  title: 'Nihat Taghizade - AI Software Engineer',
+  description: 'AI Software Engineer Portfolio',
 }
 
 export default function RootLayout({ children }) {

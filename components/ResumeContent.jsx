@@ -146,7 +146,7 @@ function ResumeSection() {
   const experiences = [
     {
       id: 1,
-      year: '2024 - Present',
+      year: '2025 - Present',
       title: 'Data Engineer',
       location: 'Baku, Novum',
       description: 'Data engineering professional focused on creating efficient data pipelines, optimizing database performance, and building infrastructure that enables seamless data flow across organizations.'

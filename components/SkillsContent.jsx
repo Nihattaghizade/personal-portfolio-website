@@ -29,10 +29,10 @@ export default function SkillsContent() {
 
 function ProgrammingSkills() {
   const skills = [
-    { id: 1, name: 'Python 2.x, 3.x', icon: '➕', percentage: 90 },
-    { id: 2, name: 'React', icon: '⚛️', percentage: 75 },
-    { id: 3, name: 'Anomaly Detection', icon: '⚠️', percentage: 75 },
-    { id: 4, name: 'SQL, MongoDB', icon: '🗄️', percentage: 85 },
+    { id: 1, name: 'JavaScript', icon: '🇯‌🇸‌', percentage: 95 },
+    { id: 2, name: 'React', icon: '⚛️', percentage: 85 },
+    { id: 3, name: 'Pyhton', icon: '🇵🇾', percentage: 65 },
+    { id: 4, name: 'SQL', icon: '🗄️', percentage: 90 },
   ]
 
   return (
@@ -74,14 +74,15 @@ function SkillBar({ skill }) {
 
 function ToolsAndPlatforms() {
   const tools = [
-    { id: 1, name: 'TensorFlow', icon: '🔶', percentage: 90, color: '#FF6F00' },
-    { id: 2, name: 'NumPy', icon: '🧮', percentage: 75, color: '#4DABCF' },
-    { id: 3, name: 'PyTorch', icon: '🔥', percentage: 85, color: '#EE4C2C' },
-    { id: 4, name: 'Microsoft Azure', icon: '☁️', percentage: 95, color: '#0078D4' },
-    { id: 5, name: 'Keras', icon: 'K', percentage: 70, color: '#9ef01a' },
-    { id: 6, name: 'Visual Studio', icon: '💜', percentage: 90, color: '#5C2D91' },
-    { id: 7, name: 'GCP', icon: '☁️', percentage: 75, color: '#4285F4' },
-    { id: 8, name: 'ChatGPT', icon: '🤖', percentage: 80, color: '#10A37F' },
+    { id: 1, name: 'Visual Studio Code', icon: '🔶', percentage: 100, color: '#FF6F00' },
+    { id: 2, name: 'WEB Postgre Database Platforms', icon: '🧮', percentage: 90, color: '#4DABCF' },
+    { id: 3, name: 'Google AI Developer Platform', icon: '🔥', percentage: 75, color: '#EE4C2C' },
+    { id: 4, name: 'Microsoft Azure', icon: '☁️', percentage: 75, color: '#0078D4' },
+    { id: 5, name: 'Microsoft Fabric', icon: 'K', percentage: 80, color: '#9ef01a' },
+    { id: 6, name: 'Visual Studio', icon: '💜', percentage: 70, color: '#5C2D91' },
+    { id: 7, name: 'Azure Data Factory', icon: '☁️', percentage: 90, color: '#4285F4' },
+    { id: 8, name: 'ChatGPT', icon: '🤖', percentage: 95, color: '#10A37F' },,
+    { id: 8, name: 'Clerk Authentication', icon: '🤖', percentage: 90, color: '#10A37F' },
   ]
 
   return (
@@ -129,10 +130,9 @@ function CircularSkill({ tool }) {
 
 function LanguagesSection() {
   const languages = [
-    { id: 1, name: 'English', flag: '🇬🇧', percentage: 90, dots: 9 },
-    { id: 2, name: 'Spanish', flag: '🇪🇸', percentage: 60, dots: 6 },
-    { id: 3, name: 'Italian', flag: '🇮🇹', percentage: 30, dots: 3 },
-    { id: 4, name: 'French', flag: '🇫🇷', percentage: 70, dots: 7 },
+    { id: 2, name: 'Azerbaijan', flag: '🇦🇿', percentage: 100, dots: 10 },
+    { id: 1, name: 'English', flag: '🇪🇳', percentage: 85, dots: 9 },
+    { id: 3, name: 'Turkish', flag: '🇹🇷', percentage: 100, dots: 10 },
   ]
 
   return (
@@ -185,14 +185,11 @@ function LanguageItem({ language }) {
 
 function SoftSkills() {
   const softSkills = [
-    { id: 1, name: 'Deep Learning, Neural Networks', icon: '✅' },
-    { id: 2, name: 'Support Vector Machines', icon: '✅' },
-    { id: 3, name: 'Cross-Functional Collaboration', icon: '✅' },
-    { id: 4, name: 'Time management', icon: '✅' },
-    { id: 5, name: 'Critical thinking', icon: '✅' },
-    { id: 6, name: 'Communication', icon: '✅' },
-    { id: 7, name: 'Project budgeting', icon: '✅' },
-    { id: 8, name: 'Business analysis', icon: '✅' },
+    { id: 1, name: 'Cross-Functional Collaboration', icon: '✅' },
+    { id: 2, name: 'Time management', icon: '✅' },
+    { id: 3, name: 'Critical thinking', icon: '✅' },
+    { id: 4, name: 'Communication', icon: '✅' },
+    { id: 5, name: 'Project budgeting', icon: '✅' },
   ]
 
   return (

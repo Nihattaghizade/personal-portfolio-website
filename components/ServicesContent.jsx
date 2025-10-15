@@ -2,39 +2,44 @@
 
 export default function ServicesContent() {
   const services = [
-    {
-      id: 1,
-      icon: '🚀',
-      developers: '3 Developers',
-      title: 'Learning Engineer for Social Media Platforms',
-      description: 'Develop and optimize AI-powered solutions for major social media platforms like Instagram, Twitter, TikTok. Work on building intelligent models for content analysis and moderation.',
-      link: '#'
-    },
-    {
-      id: 2,
-      icon: '🤖',
-      developers: '2 Developers',
-      title: 'AI ChatBot for Customer Support',
-      description: 'Design and implement an AI-based customer service chatbot. Automated the customer service chatbot using NLP techniques, reducing and improving response time by 50%.',
-      link: '#'
-    },
-    {
-      id: 3,
-      icon: '⚙️',
-      developers: '4 Developers',
-      title: 'Artificial Intelligence for IT Operations',
-      description: 'Artificial intelligence, machine learning, monitoring and big data analytics to automate. Detect, diagnose, and resolve issues more efficiently than traditional methods.',
-      link: '#'
-    },
-    {
-      id: 4,
-      icon: '🎨',
-      developers: '5 Developers',
-      title: 'Generative AI Software Development',
-      description: 'We offer generative AI solutions to a variety of needs, including adaptive design, content, image generation, and rapid prototyping, allowing you to improve productivity.',
-      link: '#'
-    },
-  ]
+  {
+    id: 1,
+    icon: '📊',
+    developers: '3 Developers',
+    title: 'Data Engineering and Pipeline Automation',
+    description:
+      'Build and maintain complex ETL pipelines for large-scale data processing. Develop data-driven architectures that enable AI and analytics workflows using modern cloud and distributed systems.',
+    link: '#'
+  },
+  {
+    id: 2,
+    icon: '🧠',
+    developers: '2 Developers',
+    title: 'AI Model Development and Integration',
+    description:
+      'Design and implement AI models for predictive analytics, anomaly detection, and process optimization. Integrate AI systems into existing software to enhance automation and intelligence.',
+    link: '#'
+  },
+  {
+    id: 3,
+    icon: '⚙️',
+    developers: '4 Developers',
+    title: 'Intelligent Software Solutions',
+    description:
+      'Develop scalable software applications integrated with AI and data pipelines. Focus on performance, modularity, and intelligent data processing across platforms.',
+    link: '#'
+  },
+  {
+    id: 4,
+    icon: '🤖',
+    developers: '2 Developers',
+    title: 'AI-Powered Software Engineering',
+    description:
+      'Develop modern software applications enhanced by AI capabilities, combining automation, intelligent recommendation, and adaptive user experience with efficient system design.',
+    link: '#'
+  }
+];
+
 
   return (
     <div className="min-h-screen px-4 sm:px-6 lg:px-12 py-12 lg:py-16">
@@ -63,8 +68,8 @@ export default function ServicesContent() {
           </div>
         </div>
 
-        {/* Pricing Section */}
-        <PricingSection />
+        {/* Pricing Section
+        <PricingSection /> */}
       </div>
     </div>
   )
@@ -81,9 +86,9 @@ function ServiceCard({ service }) {
       </div>
 
       {/* Developer count */}
-      <p className="text-xs uppercase tracking-wider text-gray-500 mb-3">
+      {/* <p className="text-xs uppercase tracking-wider text-gray-500 mb-3">
         {service.developers}
-      </p>
+      </p> */}
 
       {/* Title */}
       <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-[#9ef01a] transition-colors duration-300">
@@ -96,12 +101,12 @@ function ServiceCard({ service }) {
       </p>
 
       {/* CTA Link */}
-      <a 
+      {/* <a 
         href={service.link}
         className="inline-block text-white text-sm font-medium uppercase tracking-wide hover:text-[#9ef01a] transition-colors duration-300 border-b border-white hover:border-[#9ef01a] pb-1"
       >
         GET STARTED
-      </a>
+      </a> */}
     </div>
   )
 }

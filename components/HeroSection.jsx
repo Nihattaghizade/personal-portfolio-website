@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 export default function HeroSection() {
   const [titleIndex, setTitleIndex] = useState(0);
-  const titles = ["Senior AI Engineer", "Computer Vision Engineer"];
+  const titles = ["Software AI Engineer", "Data Engineer"];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -32,25 +32,21 @@ export default function HeroSection() {
 
         {/* Main Heading */}
         <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 leading-tight">
-          Artificial Intelligence and
+          Software AI and
           <br />
-          Machine Learning{" "}
+          Data{" "}
           <span className="inline-block px-4 py-2 bg-[#9ef01a] text-black rounded-2xl">
             Engineer
           </span>
           <br />
           <span className="text-gray-300">
-            Based in California, Los Angeles.
+            Based in Baku, Azerbaijan.
           </span>
         </h1>
 
         {/* Description */}
         <p className="text-gray-400 text-base sm:text-lg lg:text-xl mb-12 max-w-3xl leading-relaxed">
-          With over 4 years of experience in developing and deploying machine
-          learning models for fraud detection and platform safety. Skilled in
-          data analysis, anomaly detection, and implementing scalable ML
-          workflows. Proven ability to collaborate with cross-functional teams
-          and mentor peers.
+          With strong experience as a Software AI, and Data Engineer, I specialize in building modern data-driven and AI-powered software applications. Skilled in designing complex data pipelines, integrating scalable backend systems, and developing intelligent solutions using contemporary frameworks such as React, Next.js and C#. I focus on transforming raw data into actionable insights, optimizing system performance, and deploying robust AI models that enhance decision-making. Passionate about innovation, automation, and delivering high-impact, data-centric solutions that drive business growth.
         </p>
 
         {/* Stats */}
@@ -58,7 +54,7 @@ export default function HeroSection() {
           <div className="group hover:scale-105 transition-transform">
             <div className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-2">
               <span className="bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
-                8
+                3
               </span>
               <span className="text-[#9ef01a]">+</span>
             </div>
@@ -72,7 +68,7 @@ export default function HeroSection() {
           <div className="group hover:scale-105 transition-transform">
             <div className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-2">
               <span className="bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
-                96
+                10
               </span>
             </div>
             <p className="text-gray-400 text-sm sm:text-base">
@@ -85,7 +81,7 @@ export default function HeroSection() {
           <div className="group hover:scale-105 transition-transform">
             <div className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-2">
               <span className="bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
-                10
+                3
               </span>
               <span className="text-[#9ef01a]">+</span>
             </div>

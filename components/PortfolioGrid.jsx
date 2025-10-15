@@ -10,52 +10,52 @@ export default function PortfolioGrid() {
   const projects = [
     {
       id: 1,
-      title: 'E-commerce site using ML algorithms',
-      category: ['APP', 'WEBSITE'],
-      image: '/projects/project1.jpg',
-      tags: 'APP, WEBSITE',
-      link: '#'
+      title: 'AI PDF Note Taking and Q&A App',
+      category: ['WEBSITE'],
+      image: '/aipdfimage.png',
+      tags: 'AI, WEBSITE',
+      link: 'https://ai-pdf-note-taking-app.vercel.app/'
     },
     {
       id: 2,
-      title: 'Poster generator with DALL-E prompts',
-      category: ['GENERATOR'],
-      image: '/projects/project2.jpg',
-      tags: 'GENERATOR',
-      link: '#'
+      title: 'Apple Animated Website',
+      category: ['Animated App'],
+      image: '/appleweb.png',
+      tags: 'Animated App',
+      link: 'https://apple-website-liart-rho.vercel.app/'
     },
-    {
-      id: 3,
-      title: 'AI-powered chatbot platform',
-      category: ['SOFTWARE', 'APP'],
-      image: '/projects/project3.jpg',
-      tags: 'SOFTWARE, APP',
-      link: '#'
-    },
-    {
-      id: 4,
-      title: 'Real-time fraud detection system',
-      category: ['SOFTWARE'],
-      image: '/projects/project4.jpg',
-      tags: 'SOFTWARE',
-      link: '#'
-    },
-    {
-      id: 5,
-      title: 'Mobile fitness tracking application',
-      category: ['APP'],
-      image: '/projects/project5.jpg',
-      tags: 'APP',
-      link: '#'
-    },
-    {
-      id: 6,
-      title: 'Portfolio website builder',
-      category: ['WEBSITE', 'GENERATOR'],
-      image: '/projects/project6.jpg',
-      tags: 'WEBSITE, GENERATOR',
-      link: '#'
-    },
+    // {
+    //   id: 3,
+    //   title: 'AI-powered chatbot platform',
+    //   category: ['SOFTWARE', 'APP'],
+    //   image: '/projects/project3.jpg',
+    //   tags: 'SOFTWARE, APP',
+    //   link: '#'
+    // },
+    // {
+    //   id: 4,
+    //   title: 'Real-time fraud detection system',
+    //   category: ['SOFTWARE'],
+    //   image: '/projects/project4.jpg',
+    //   tags: 'SOFTWARE',
+    //   link: '#'
+    // },
+    // {
+    //   id: 5,
+    //   title: 'Mobile fitness tracking application',
+    //   category: ['APP'],
+    //   image: '/projects/project5.jpg',
+    //   tags: 'APP',
+    //   link: '#'
+    // },
+    // {
+    //   id: 6,
+    //   title: 'Portfolio website builder',
+    //   category: ['WEBSITE', 'GENERATOR'],
+    //   image: '/projects/project6.jpg',
+    //   tags: 'WEBSITE, GENERATOR',
+    //   link: '#'
+    // },
   ]
 
   const filteredProjects = activeFilter === 'ALL' 
@@ -81,7 +81,7 @@ export default function PortfolioGrid() {
             <span className="text-[#9ef01a]">P</span>ORTFOLIO
           </h1>
 
-          {/* Filter Tabs */}
+          {/* Filter Tabs
           <div className="flex flex-wrap gap-3 relative z-10">
             {filters.map((filter) => (
               <button
@@ -99,7 +99,7 @@ export default function PortfolioGrid() {
                 {filter}
               </button>
             ))}
-          </div>
+          </div> */}
         </div>
 
         {/* Projects Grid */}

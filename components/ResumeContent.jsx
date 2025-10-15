@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image'
 import { useState } from 'react'
 
 export default function ResumeContent() {
@@ -6,7 +7,7 @@ export default function ResumeContent() {
     <div className="min-h-screen px-4 sm:px-6 lg:px-12 py-12 lg:py-16">
       <div className="max-w-7xl mx-auto">
         {/* Testimonials Section */}
-        <TestimonialsSection />
+        {/* <TestimonialsSection /> */}
 
         {/* Resume Section */}
         <ResumeSection />
@@ -145,57 +146,57 @@ function ResumeSection() {
   const experiences = [
     {
       id: 1,
-      year: '2023 - Present',
-      title: 'AIOps/MLOps Engineer',
-      location: 'LOS ANGELES, GOOGLE',
-      description: 'Design and implement end-to-end MLOps pipelines for ML models using GitHub Actions and AWS services.'
+      year: '2024 - Present',
+      title: 'Data Engineer',
+      location: 'Baku, Novum',
+      description: 'Data engineering professional focused on creating efficient data pipelines, optimizing database performance, and building infrastructure that enables seamless data flow across organizations.'
     },
     {
       id: 2,
-      year: '2022 - 2023',
-      title: 'Machine Learning Engineer',
-      location: 'NEW YORK, MICROSOFT',
-      description: 'Enhanced an automatic data processing machine performance by analyzing, testing, debugging lines of code.'
+      year: '2023 - 2024',
+      title: 'Software Engineer',
+      location: 'Baku',
+      description: 'Software developer focused on building intelligent document processing systems and interactive web applications that merge artificial intelligence with exceptional user experiences.'
     },
   ]
 
   const certifications = [
     {
       id: 1,
-      year: '2019 - 2020',
-      title: 'AWS Certified Machine Learning',
-      subtitle: 'Speciality',
-      description: 'Two years of hands-on experience developing, architecting, and running ML or deep learning workloads in the AWS Cloud.',
-      link: 'CERTIFICATE'
+      year: '2025',
+      title: 'Microsoft Certified: Data Fundamentals',
+      subtitle: 'Data Engineering',
+      description: 'Microsoft Azure Data Fundamentals (DP-900) certification demonstrating verified knowledge of cloud data services, database concepts, and Azure data solutions, serving as a stepping stone toward advanced certifications in data engineering and database administration.',
+      link: 'https://learn.microsoft.com/api/credentials/share/en-us/NihatTaghizade-2496/D608D4F7C7EEDF65?sharingId=7E50B582010CEB56'
     },
     {
       id: 2,
-      year: '2018 - 2019',
-      title: 'Professional Machine Learning Engineer',
-      subtitle: 'Google Cloud',
-      description: 'Builds, evaluates, productionizes, and optimizes AI solutions by using Google Cloud capabilities and knowledge.',
-      link: 'CERTIFICATE'
+      year: '2023',
+      title: 'Software Development',
+      subtitle: 'Code Academy',
+      description: 'Honours Diploma in Software Development providing comprehensive training in full-stack development, software engineering principles, and modern programming languages, with hands-on experience in designing, implementing, and testing scalable software solutions.',
+      link: ''
     },
   ]
 
   const education = [
     {
       id: 1,
-      year: '2012 - 2016',
-      title: 'Bachelor of Computer Science',
-      location: 'Carson, USA',
-      description: 'Master of Science in Machine Learning and Artificial Intelligence. Minors in Data Structures and Algorithm Design.',
-      link: 'COMPUTER SCIENCE',
-      logo: '/logos/logo1.png'
+      year: '2025 - 2027',
+      title: 'Azerbaijan Technical University',
+      location: 'Baku, Azerbaijan',
+      description: 'Master Degree in Artificial Intelligence.',
+      link: '',
+      logo: '/aztulogo.png'
     },
     {
       id: 2,
-      year: '2004 - 2012',
-      title: 'University of California, Berkeley',
-      location: 'California, USA',
-      description: 'Relevant Coursework: Machine Learning, Statistical Analysis, Data Mining. Honors: Dean\'s List, Honors Thesis in Predictive Modeling.',
-      link: 'ABOUT UNIVERSITY',
-      logo: '/logos/logo2.png'
+      year: '2021 - 2025',
+      title: 'Baku State University',
+      location: 'Baku, Azerbaijan',
+      description: 'Bachelor degree in Computer Science.',
+      link: '',
+      logo: '/bsulogo.png'
     },
   ]
 
@@ -271,7 +272,9 @@ function TimelineItem({ item, type, isLast }) {
           {type === 'education' && item.logo && (
             <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center p-2">
               {/* Logo placeholder */}
-              <div className="text-xs text-gray-800 font-bold">LOGO</div>
+              <div className="text-xs text-gray-800 font-bold">
+                <Image src={item.logo} alt={item.title}  width={50} height={50} />
+                </div>
             </div>
           )}
         </h3>
@@ -292,10 +295,10 @@ function TimelineItem({ item, type, isLast }) {
         {/* Link */}
         {item.link && (
           <a 
-            href="#"
+            href={item.link}
             className="inline-flex items-center gap-2 text-white text-sm font-medium uppercase tracking-wide hover:text-[#9ef01a] transition-colors duration-300 border-b border-white hover:border-[#9ef01a] pb-1"
           >
-            {item.link}
+            Certificate
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>

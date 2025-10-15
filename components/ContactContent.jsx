@@ -23,7 +23,7 @@ export default function ContactContent() {
         <ContactInfoCards />
 
         {/* Contact Form */}
-        <ContactForm />
+        {/* <ContactForm /> */}
       </div>
     </div>
   )
@@ -35,21 +35,21 @@ function ContactInfoCards() {
       id: 1,
       icon: '📞',
       label: 'Phone',
-      value: '+1 840 841 25 69',
+      value: '+994 50 448 48 63',
       cols: 1
     },
     {
       id: 2,
       icon: '✉️',
       label: 'Email',
-      value: 'RYAN@WEBSITE.COM',
+      value: 'taghizadehh666@gmail.com',
       cols: 2
     },
     {
       id: 3,
       icon: '🗺️',
       label: 'Address',
-      value: 'NEW YORK, NY, USA',
+      value: 'Baku, Azerbaijan',
       cols: 3
     },
   ]

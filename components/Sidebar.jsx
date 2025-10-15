@@ -362,7 +362,7 @@ export default function Sidebar() {
               </a>
             </div>
 
-            {/* Download CV Button */}
+            {/* Download CV Button  AAA*/}
             <button 
               onClick={handleDownloadCV}
               className="w-full py-4 bg-[#9ef01a] hover:bg-[#8dd916] text-black font-semibold rounded-full transition-all transform hover:scale-105 flex items-center justify-center gap-2"

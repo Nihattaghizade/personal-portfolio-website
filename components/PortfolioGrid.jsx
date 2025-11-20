@@ -24,14 +24,14 @@ export default function PortfolioGrid() {
       tags: 'Animated App',
       link: 'https://apple-website-liart-rho.vercel.app/'
     },
-    // {
-    //   id: 3,
-    //   title: 'AI-powered chatbot platform',
-    //   category: ['SOFTWARE', 'APP'],
-    //   image: '/projects/project3.jpg',
-    //   tags: 'SOFTWARE, APP',
-    //   link: '#'
-    // },
+    {
+      id: 3,
+      title: 'AI Career Coach Agent',
+      category: ['SOFTWARE', 'Website'],
+      image: '/aicareercoach.png',
+      tags: 'AI, APP',
+      link: 'https://ai-career-coach-agent-tau.vercel.app/'
+    },
     // {
     //   id: 4,
     //   title: 'Real-time fraud detection system',
